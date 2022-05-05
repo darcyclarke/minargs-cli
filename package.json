@@ -1,0 +1,26 @@
+{
+  "name": "@minargs/cli",
+  "version": "0.0.1",
+  "description": "cli for the minimum viable argument parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap",
+    "lint": "eslint"
+  },
+  "author": {
+    "name": "Darcy Clarke",
+    "email": "darcy@darcyclarke.me",
+    "url": "https://darcyclarke.me"
+  },
+  "license": "Apache-2.0",
+  "bin": {
+    "minargs": "bin/cli.js"
+  },
+  "dependencies": {
+    "minargs": "^0.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "tap": "^16.2.0"
+  }
+}
