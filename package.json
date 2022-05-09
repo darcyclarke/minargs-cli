@@ -22,5 +22,28 @@
   "devDependencies": {
     "eslint": "^8.14.0",
     "tap": "^16.2.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/darcyclarke/minargs/issues"
+  },
+  "homepage": "https://github.com/darcyclarke/minargs#readme",
+  "keywords": [
+    "argument",
+    "options",
+    "flags",
+    "values",
+    "positionals",
+    "parsing",
+    "strict",
+    "arg",
+    "argv",
+    "process",
+    "nopt",
+    "commander",
+    "minimist",
+    "yargs",
+    "parseargs",
+    "cli",
+    "tool"
+  ]
 }
