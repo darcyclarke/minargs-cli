@@ -22,9 +22,9 @@
     "eslint": "^8.14.0"
   },
   "bugs": {
-    "url": "https://github.com/darcyclarke/minargs/issues"
+    "url": "https://github.com/darcyclarke/minargs-cli/issues"
   },
-  "homepage": "https://github.com/darcyclarke/minargs#readme",
+  "homepage": "https://github.com/darcyclarke/minargs-cli#readme",
   "keywords": [
     "argument",
     "options",
