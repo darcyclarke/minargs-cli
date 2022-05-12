@@ -6,7 +6,7 @@ This CLI is a companion/utility to [`minargs`](https://npmjs.com/package/minargs
 
 ```bash
 # install package globally & call bin...
-npm install minargs -g && minargs
+npm install @minargs/cli -g && minargs
 
 # or, use `npx` to install & call bin...
 npx -- @minargs/cli "<args>" [<options>]
