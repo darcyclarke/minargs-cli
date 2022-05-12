@@ -9,7 +9,7 @@ This CLI is a companion/utility to [`minargs`](https://npmjs.com/package/minargs
 npm install minargs -g && minargs
 
 # or, use `npx` to install & call bin...
-npx minargs
+npx -- @minargs/cli "<args>" [<options>]
 ```
 
 ### Usage
