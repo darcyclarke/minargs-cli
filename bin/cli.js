@@ -2,25 +2,19 @@
 
 const isTTY = process.stdin.isTTY
 const stdin = process.stdin
-const { minargs, mainArgs } = require('minargs')
+const { minargs, mainArgs } = require('/minargs')
 const usage = {
-  multiple: {
-    multiple: true,
-    short: 'm',
-    usage: 'minargs --multiple <option>',
-    description: 'Define an argument that should support multiples'
-  },
   alias: {
     multiple: true,
     short: 'a',
     usage: 'minargs --alias <alias>:<option>',
     description: 'Define an alias between two option names'
   },
-  known: {
+  recursive: {
     multiple: true,
-    short: 'k',
-    usage: 'minargs --known <option>',
-    description: 'Define an option that is expected'
+    short: 'r',
+    usage: 'minargs --recursive',
+    description: 'Default: false - Define whether to recursively parse beyond `--` end markers'
   },
   positionalValues: {
     short: 'p',
@@ -35,8 +29,6 @@ const usage = {
 }
 const opts = {
   positionalValues: true,
-  known: Object.keys(usage),
-  multiple: Object.keys(usage).filter(arg => usage[arg].multiple),
   alias: Object.keys(usage).filter(arg => usage[arg].short).reduce((o, k) => {
     o[usage[k].short] = k
     return o
@@ -78,9 +70,8 @@ function run (argv) {
   try {
     const opts = {
       positionalValues: !!args.positionalValues,
-      known: !values.known ? [] : values.known,
-      multiple: !values.multiple ? [] : values.multiple,
-      alias: !values.alias ? [] : values.alias.reduce((o, v) => {
+      known: !!args.recursive,
+      alias: !args.alias ? [] : args.alias.reduce((o, v) => {
         const parts = v.split(':')
         o[parts[0]] = parts[1]
         return o

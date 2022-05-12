@@ -4,7 +4,6 @@
   "description": "cli for the minimum viable argument parser",
   "main": "index.js",
   "scripts": {
-    "test": "tap",
     "lint": "eslint"
   },
   "author": {
@@ -17,11 +16,10 @@
     "minargs": "bin/cli.js"
   },
   "dependencies": {
-    "minargs": "^0.0.5"
+    "minargs": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.14.0",
-    "tap": "^16.2.0"
+    "eslint": "^8.14.0"
   },
   "bugs": {
     "url": "https://github.com/darcyclarke/minargs/issues"

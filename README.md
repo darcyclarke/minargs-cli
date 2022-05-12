@@ -20,20 +20,19 @@ minargs "<args>" [<options>]
 
 ### Options
 
-- `--known` (alias: `k`)
-- `--multiple` (alias: `m`)
 - `--alias` (alias: `a`)
+- `--recursive` (alias: `r`) Default: `false`
 - `--positionalValues` (alias: `p`) Default: `false`
 
 ### Examples
 
-#### Get the # of times a arg was defined (using multiples & alias')...
+#### Get the # of times a arg was defined (also, using alias')...
 
 ```bash
-minargs "--foo -f -f -ffff" -m foo -a f:foo | jq.values.length
+minargs "--foo -f -f -ffff" -a f:foo | jq '.args.foo | length'
 ```
 
 #### Reading from `stdin`...
 ```bash
-"--foo --bar baz" | minargs -k bar -v bar -s
+"--foo --bar baz" | minargs
 ```
