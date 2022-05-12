@@ -2,7 +2,7 @@
 
 const isTTY = process.stdin.isTTY
 const stdin = process.stdin
-const { minargs, mainArgs } = require('/minargs')
+const { minargs, mainArgs } = require('minargs')
 const usage = {
   alias: {
     multiple: true,
