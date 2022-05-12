@@ -1,6 +1,6 @@
 {
   "name": "@minargs/cli",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "cli for the minimum viable argument parser",
   "main": "index.js",
   "scripts": {
